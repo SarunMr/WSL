@@ -1,0 +1,61 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$character"""
+
+[username]
+style_user = "fg:#E3E5E5 bg:#565f89"
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+style = "fg:#E3E5E5 bg:#7aa2f7"
+format = "[|$hostname]($style)"
+ssh_only = false
+
+[directory]
+read_only = " "
+style = "fg:#bb9af7"
+format = " [$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "fg:#F9E2AF"
+min_time = 0
+
+[git_branch]
+format = "[$branch]($style) "
+style = "fg:#769FF0"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](fg:#76B5F9) ($ahead_behind$stashed)]($style)"
+style = "fg:#76B5F9"
+conflicted = "⟡"
+untracked = "·"
+modified = "+"
+staged = "●"
+renamed = "»"
+deleted = "✘"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "fg:#A0A9CB"
+
+[battery]
+full_symbol = "•"
+charging_symbol = "⇡"
+discharging_symbol = "⇣"
+style = "fg:#A0A9CB"
+
+[character]
+success_symbol = "[>](fg:#FF9E64)"
+error_symbol = "[<](fg:#858585)"
