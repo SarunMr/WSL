@@ -4,6 +4,10 @@ vim.g.maplocalleader = ' '
 
 require('init')
 
+---------------------------------------------------------------
+---SOME TRASPARENCY CODE AND COLORSCHME CODE
+---------------------------------------------------------------
+
 local function set_line_number_highlights()
     vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff" })  -- Regular line number
     vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#858585" })  -- Line numbers below

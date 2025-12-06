@@ -63,3 +63,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.cmd("silent! lcd %:p:h")
   end
 })
+--No auto-comment on enter
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ 'r', 'o' })
+  end,
+})

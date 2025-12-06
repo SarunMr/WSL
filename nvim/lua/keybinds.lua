@@ -1,10 +1,12 @@
-
-
 -- Normal mode keybindings
-vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', { noremap = true, silent = true }) -- Move to left window
-vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', { noremap = true, silent = true }) -- Move to bottom window
-vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { noremap = true, silent = true }) -- Move to top window
-vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { noremap = true, silent = true }) -- Move to right window
+
+--UNCOMMENT IF DONT HAVE VIM-TMUX-NAVIGATOR PLUGIN
+--/
+-- vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', { noremap = true, silent = true }) -- Move to left window
+-- vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', { noremap = true, silent = true }) -- Move to bottom window
+-- vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { noremap = true, silent = true }) -- Move to top window
+-- vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { noremap = true, silent = true }) -- Move to right window
+--/
 
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize -2<CR>', { noremap = true, silent = true }) -- Decrease window height
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize +2<CR>', { noremap = true, silent = true }) -- Increase window height
